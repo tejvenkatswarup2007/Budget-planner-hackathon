@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planner - Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="landing-body">
+
+<div class="landing-container">
+
+    <!-- LEFT SIDE -->
+    <div class="about-section">
+
+        <div class="brand-header">
+            <h1>Budget Planner</h1>
+            <p class="tagline">
+                Take control of your finances with discipline and smart planning.
+            </p>
+        </div>
+
+        <div class="about-content">
+            <h2>About the Project</h2>
+
+            <p>
+                A budget planner helps users organize and manage their finances
+                effectively. Users can input income and expenses, set savings
+                goals, and categorize expenditures.
+            </p>
+
+            <p>
+                The platform provides visualizations, such as pie charts and
+                graphs, to highlight spending patterns. Alerts for overspending
+                and monthly summaries ensure better financial discipline and planning.
+            </p>
+        </div>
+
+        <div class="feature-highlights">
+
+            <div class="highlight-item">
+                <span>📊</span>
+                <p>Visual Reports</p>
+            </div>
+
+            <div class="highlight-item">
+                <span>🎯</span>
+                <p>Savings Goals</p>
+            </div>
+
+            <div class="highlight-item">
+                <span>⚠️</span>
+                <p>Overspending Alerts</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="auth-section">
+
+        <div class="auth-card">
+
+            <!-- LOGIN / REGISTER TABS -->
+            <div class="auth-tabs">
+
+                <button
+                    id="login-tab-btn"
+                    class="tab-btn active"
+                    onclick="switchTab('login')">
+                    Login
+                </button>
+
+                <button
+                    id="register-tab-btn"
+                    class="tab-btn"
+                    onclick="switchTab('register')">
+                    Register
+                </button>
+
+            </div>
+
+
+            <!-- ================= LOGIN ================= -->
+
+            <form id="login-form" class="auth-form">
+
+                <h2>Welcome Back</h2>
+
+                <p class="form-subtitle">
+                    Please enter your details to sign in.
+                </p>
+
+                <div class="form-group">
+
+                    <label for="login-email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="login-email"
+                        placeholder="name@example.com"
+                        required>
+
+                </div>
+
+
+                <!-- Salary REMOVED from Login -->
+
+
+                <div class="form-group">
+
+                    <label for="login-password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="login-password"
+                        placeholder="••••••••"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary btn-block">
+                    Login
+                </button>
+
+            </form>
+
+
+            <!-- ================= REGISTER ================= -->
+
+            <form
+                id="register-form"
+                class="auth-form"
+                style="display:none;">
+
+                <h2>Create Account</h2>
+
+                <p class="form-subtitle">
+                    Start managing your budget today.
+                </p>
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label for="register-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="register-name"
+                        placeholder="John Doe"
+                        required>
+
+                </div>
+
+
+                <!-- SALARY NOW UNDER NAME -->
+
+                <div class="form-group">
+
+                    <label for="register-salary">
+                        Monthly Salary / Income
+                    </label>
+
+                    <input
+                        type="number"
+                        id="register-salary"
+                        placeholder="e.g. 45000"
+                        min="1"
+                        step="0.01"
+                        required>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="register-email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="register-email"
+                        placeholder="name@example.com"
+                        required>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="register-password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="register-password"
+                        placeholder="Create a password"
+                        minlength="6"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary btn-block">
+                    Register
+                </button>
+
+            </form>
+
+
+            <!-- ADMIN LOGIN -->
+
+            <div class="admin-entry">
+
+                <span>Administrator?</span>
+
+                <a href="admin-login.html">
+                    Admin Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function switchTab(tabName) {
+
+    const loginForm =
+        document.getElementById("login-form");
+
+    const registerForm =
+        document.getElementById("register-form");
+
+    const loginBtn =
+        document.getElementById("login-tab-btn");
+
+    const registerBtn =
+        document.getElementById("register-tab-btn");
+
+
+    if (tabName === "login") {
+
+        loginForm.style.display = "block";
+        registerForm.style.display = "none";
+
+        loginBtn.classList.add("active");
+        registerBtn.classList.remove("active");
+
+    } else {
+
+        loginForm.style.display = "none";
+        registerForm.style.display = "block";
+
+        registerBtn.classList.add("active");
+        loginBtn.classList.remove("active");
+
+    }
+
+}
+
+</script>
+
+<script src="app.js"></script>
+
+</body>
+</html>

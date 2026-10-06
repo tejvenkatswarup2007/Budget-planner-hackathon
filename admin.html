@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Budget Planner - Admin</title>
+
+    <link
+        rel="stylesheet"
+        href="admin.css">
+
+</head>
+
+
+<body>
+
+<div class="admin-container">
+
+    <header>
+
+        <div>
+
+            <h1>
+                💰 Budget Planner
+            </h1>
+
+            <h2>
+                Admin Dashboard
+            </h2>
+
+        </div>
+
+
+        <button onclick="logout()">
+            Logout
+        </button>
+
+    </header>
+
+
+    <!-- STATISTICS -->
+
+    <section class="stats">
+
+        <div class="card">
+
+            <h3>
+                👥 Users
+            </h3>
+
+            <p id="userCount">
+                0
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                💵 Total Income
+            </h3>
+
+            <p id="totalIncome">
+                ₹0
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                💸 Total Expenses
+            </h3>
+
+            <p id="totalExpense">
+                ₹0
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                📊 Transactions
+            </h3>
+
+            <p id="transactionCount">
+                0
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CUSTOMER ANALYSIS -->
+
+    <section class="admin-section">
+
+        <h2>
+            Customer Analysis
+        </h2>
+
+        <p class="section-note">
+            Each row is calculated from that customer's
+            salary, transactions and savings goal.
+        </p>
+
+
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+
+                        <th>Email</th>
+
+                        <th>Salary / Income</th>
+
+                        <th>Expenses</th>
+
+                        <th>Balance</th>
+
+                        <th>Savings Goal</th>
+
+                        <th>Transactions</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="userTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- ALL TRANSACTIONS -->
+
+    <section class="admin-section">
+
+        <h2>
+            Recent Transactions
+        </h2>
+
+
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>User</th>
+
+                        <th>Date</th>
+
+                        <th>Type</th>
+
+                        <th>Amount</th>
+
+                        <th>Category</th>
+
+                        <th>Name</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="transactionTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>
