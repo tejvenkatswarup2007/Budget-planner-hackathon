@@ -153,18 +153,16 @@
                 <!-- NAME -->
 
                 <div class="form-group">
+    <label for="register-name">Full Name</label>
 
-                    <label for="register-name">
-                        Full Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="register-name"
-                        placeholder="John Doe"
-                        required>
-
-                </div>
+    <input
+        type="text"
+        id="register-name"
+        placeholder="Enter your full name"
+        required
+        pattern="[A-Za-z ]+"
+        title="Name should contain only alphabets and spaces">
+</div>
 
 
                 <!-- SALARY NOW UNDER NAME -->
